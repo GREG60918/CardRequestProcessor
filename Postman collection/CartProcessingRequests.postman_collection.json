@@ -1,0 +1,111 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CartProcessingRequests",
+		"_postman_id": "0403fd84-c83e-6841-354a-d80e8f2b01c9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Applicant under 18",
+			"request": {
+				"url": "https://localhost:7275/api/cardrequests",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Greg\",\n    \"lastName\": \"Clarkson\",\n    \"annualIncome\": 42000,\n    \"dateOfBirth\": \"2010-01-09T00:00:00\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Applicant over 18 with salaray under 32000",
+			"request": {
+				"url": "https://localhost:7275/api/cardrequests",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Greg\",\n    \"lastName\": \"Clarkson\",\n    \"annualIncome\": 20000,\n    \"dateOfBirth\": \"1995-01-09T00:00:00\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Applicant over 18 with salaray over 32000",
+			"request": {
+				"url": "https://localhost:7275/api/cardrequests",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Greg\",\n    \"lastName\": \"Clarkson\",\n    \"annualIncome\": 40000,\n    \"dateOfBirth\": \"1995-01-09T00:00:00\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Applicant with no last name",
+			"request": {
+				"url": "https://localhost:7275/api/cardrequests",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Greg\",\n    \"lastName\": \"Clarkson\",\n    \"annualIncome\": 40000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Applicant with no last date of birth",
+			"request": {
+				"url": "https://localhost:7275/api/cardrequests",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Greg\",\n    \"lastName\": \"Clarkson\",\n    \"annualIncome\": 40000\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
